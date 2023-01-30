@@ -246,8 +246,8 @@ function continueStatement(num) {
          valor = valor + 2;
          arreglo.push(valor);
       }
-   }
-   return arreglo;
+   } 
+   return arreglo; 
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
