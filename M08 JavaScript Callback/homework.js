@@ -5,7 +5,7 @@ function mayuscula(nombre) {
    // Debe devolver el mismo nombre, pero con la primera letra en mayúscula.
    // [Ejemplo]: "mario" ----> "Mario".
    // Tu código:
-   return nombre[0].toUpperCase() + nombre.slice(1)
+   return nombre[0].toUpperCase() + nombre.slice(1);
 }
 
 function invocarCallback(cb) {
@@ -29,7 +29,7 @@ function sumarArray(arrayOfNumbers, cb) {
    // Este resultado debes pasárselo como argumento al callback recibido.
    // [NOTA]: no debes reotrnar nada.
    // Tu código:
-   var SumaTotal = arrayOfNumbers.reduce(function(acc, curr) {
+   var SumaTotal = arrayOfNumbers.reduce(function(acc, curr){
       return acc + curr;
    }, 0)
    cb(SumaTotal)
@@ -40,9 +40,7 @@ function forEach(array, cb) {
    // Debes iterar sobre el arreglo, y por cada elemento ejecutar el callback.
    // Debes pasarle el elemento como argumento al callback.
    // Tu código:
-   for (var i = 0; i < array.length; i++) {
-      cb(array[i])
-   }
+   array.forEach(cb);
 }
 
 function map(array, cb) {
@@ -61,12 +59,12 @@ function filter(arrayOfStrings) {
    // Luego retorna un nuevo arreglo con estos elementos.
    // Tu código:
    var nuevoArray = [];
-   for(var i = 0; i < arrayOfStrings.length; i++) {
-      if(arrayOfStrings[i][0] === 'a') {
-         nuevoArray.push(arrayOfStrings[i])
+   arrayOfStrings.filter(function(el) {
+      if(el[0] === "a") {
+         nuevoArray.push(el);
       }
-   }
-   return nuevoArray
+   })
+   return nuevoArray;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
